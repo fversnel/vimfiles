@@ -71,7 +71,3 @@ autocmd BufRead,BufNewFile *.fs,*.fsx :set tabstop=4
 
 " Automatically clean whitespace on these files:
 autocmd BufWritePre *.java,*.rb,*.r,*.py,*.cjl,*.fs,*.fsx :call <SID>StripTrailingWhitespaces()
-
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-
