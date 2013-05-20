@@ -13,3 +13,6 @@
 [submodule "bundle/vimscala"]
 	path = bundle/vimscala
 	url = git://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/githubcolors"]
+	path = bundle/githubcolors
+	url = git://github.com/endel/vim-github-colorscheme.git
