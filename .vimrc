@@ -11,8 +11,8 @@ set scrolloff=3       " Have n lines of offset when scrolling
 set sidescroll=10     " Scroll vertically with n characters
 set number            " Show line numbers
 set expandtab         " Spaces instead of tabs
-set tabstop=2         " Tabs are n characters long
-set shiftwidth=2
+set tabstop=4         " Tabs are n characters long
+set shiftwidth=4
 set textwidth=100     " Maximum width of a line
 set incsearch         " Search for text as you enter it
 set history=1000      " Remember the last n commands
@@ -54,6 +54,3 @@ let vimclojure#HighlightBuiltins=1
 autocmd BufRead,BufNewFile *.fs,*.fsx :set expandtab
 autocmd BufRead,BufNewFile *.fs,*.fsx :set shiftwidth=4
 autocmd BufRead,BufNewFile *.fs,*.fsx :set tabstop=4
-
-" Automatically clean whitespace on these files:
-autocmd BufWritePre *.java,*.rb,*.r,*.py,*.cjl,*.fs,*.fsx :call <SID>StripTrailingWhitespaces()
