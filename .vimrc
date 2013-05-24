@@ -21,7 +21,11 @@ set smartcase         " case-sensitive only if there is a capital letter in the 
                       " *-style searches continue to be consistently case-sensitive.
 set winminheight=0    " Set the minimum window height
 set title             " Set the title of the window
-set dir=~/.vimswap   " Set a directory to store swap files.
+set dir=~/.vim/swapdir " Set a directory to store swap files.
+set undofile
+set undodir=~/.vim/undodir
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 syntax on             " Turn on syntax highlighting automatically
 filetype plugin indent on    " Load filetype specific settings (in ~/.vim/ftplugin)
 set formatprg=par\ -w100 " Sophisticated wrapping algorithm
