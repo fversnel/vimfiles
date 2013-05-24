@@ -16,3 +16,9 @@
 [submodule "bundle/githubcolors"]
 	path = bundle/githubcolors
 	url = git://github.com/endel/vim-github-colorscheme.git
+[submodule "bundle/vimsurround"]
+	path = bundle/vimsurround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git

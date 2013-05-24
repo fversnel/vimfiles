@@ -38,21 +38,7 @@ map <C-T> :tabnew<CR>
 map <C-N> :CommandT<CR>
 
 " File browser
-map <C-M> :NERDTree<CR>
-
-" Function to clean up whitespace
-nnoremap <silent> <F3> :call <SID>StripTrailingWhitespaces()<CR>
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
+map <C-M> :NERDTreeToggle<CR>
 
 " Clojure settings
 autocmd BufRead,BufNewFile *.cjl :set expandtab
@@ -60,7 +46,7 @@ autocmd BufRead,BufNewFile *.cjl :set shiftwidth=2
 autocmd BufRead,BufNewFile *.cjl :set tabstop=2
 autocmd BufRead,BufNewFile *.cjl :set textwidth=78
 " Highlight Clojure's builtins
-"let vimclojure#HighlightBuiltins=1 
+let vimclojure#HighlightBuiltins=1 
 " Rainbow parentheses'
 "let vimclojure#ParenRainbow=1
 
