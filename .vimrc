@@ -26,10 +26,15 @@ set undofile
 set undodir=~/.vim/undodir
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+set exrc            " enable per-directory .vimrc files
+set secure          " disable unsafe commands in local .vimrc files
 syntax on             " Turn on syntax highlighting automatically
 filetype plugin indent on    " Load filetype specific settings (in ~/.vim/ftplugin)
 set formatprg=par\ -w100 " Sophisticated wrapping algorithm
 colors github
+
+" Disable help
+nmap <F1> <nop>
 
 " Window movement
 map <C-J> <C-W>j<C-W>_
@@ -45,14 +50,22 @@ map <C-N> :CommandT<CR>
 map <C-M> :NERDTreeToggle<CR>
 
 " Clojure settings
-autocmd BufRead,BufNewFile *.cjl :set expandtab
-autocmd BufRead,BufNewFile *.cjl :set shiftwidth=2
-autocmd BufRead,BufNewFile *.cjl :set tabstop=2
-autocmd BufRead,BufNewFile *.cjl :set textwidth=78
+autocmd BufRead,BufNewFile *.clj :set expandtab
+autocmd BufRead,BufNewFile *.clj :set shiftwidth=2
+autocmd BufRead,BufNewFile *.clj :set tabstop=2
+autocmd BufRead,BufNewFile *.clj :set textwidth=78
+autocmd BufRead,BufNewFile *.dtm,*.edn :setf clojure
 " Highlight Clojure's builtins
 let vimclojure#HighlightBuiltins=1 
 " Rainbow parentheses'
 "let vimclojure#ParenRainbow=1
+
+" Gradle settings
+autocmd BufRead,BufNewFile *.gradle :set filetype=groovy
+
+" Javascript settings
+autocmd BufRead,BufNewFile *.js :set shiftwidth=2
+autocmd BufRead,BufNewFile *.js :set tabstop=2
 
 " Fsharp settings
 autocmd BufRead,BufNewFile *.fs,*.fsx :set expandtab
